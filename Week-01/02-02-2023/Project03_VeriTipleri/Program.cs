@@ -1,5 +1,11 @@
 ﻿namespace Project03_VeriTipleri
 {
+    class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }    
+        public decimal Price { get; set; }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -31,6 +37,12 @@
             Console.Clear();
             Console.WriteLine(ad[0]); //JS'deki arrayle aynısı. 0 yazdığımız için Mehmet isminin ilk harfini sonuç olarak verecek. 4 yazsaydık 5. harfi sonuç olarak verecekti.
 
+            Random random = new Random();
+            Product urun = new Product(); //Kodun en başında class kısmında "Product" adında bir class oluşturduk ve bu classa urun isimli bir değişken tanımladık.
+            urun.Id = 1; //başta oluşturduğumuz Product classına Id, Name ve Price isimli objeler tanımladık ve bunlara değerler verdik.
+            urun.Name = "iPhone 14";
+            urun.Price = 34500;
+            Console.WriteLine(urun.Id + ", " + urun.Name + ", " + urun.Price); //son olarak canlıda görüntüledik.
         }
     }
 }
