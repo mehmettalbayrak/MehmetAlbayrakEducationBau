@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proje06_MatematikselMetotlar", "Proje06_MatematikselMetotlar.csproj", "{97572936-320B-4C2D-A5EF-CFCBD9DDD084}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97572936-320B-4C2D-A5EF-CFCBD9DDD084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97572936-320B-4C2D-A5EF-CFCBD9DDD084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97572936-320B-4C2D-A5EF-CFCBD9DDD084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97572936-320B-4C2D-A5EF-CFCBD9DDD084}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1322FE0D-8275-42FD-B4F5-B3743DCA14D6}
+	EndGlobalSection
+EndGlobal
