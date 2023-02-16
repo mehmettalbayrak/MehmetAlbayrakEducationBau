@@ -162,5 +162,10 @@ class Program
         Console.Write("Kuvveti giriniz: ");
         int kuvvet = Convert.ToInt32(Console.ReadLine()); //ipucu küp almak istiyorsanız (toplam *= toplam)
 
+        for(int i = sayi; i<=sayi; i++)
+        {
+            
+        }
+
     }
 }
