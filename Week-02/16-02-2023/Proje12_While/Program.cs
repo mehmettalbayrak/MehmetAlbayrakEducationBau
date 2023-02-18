@@ -55,7 +55,7 @@ class Program
 
         //klavyeden girilecek sayılar arasında en büyüğünü buldurup yazın. Yani kullanıcı kendisi durmak isteyene kadar sayı girişi yapsın. Ne zaman 0 girerse uygulama dursun. Ve 0 girildikten sonra girilmiş sayıların en büyüğünü ekrana yazdırın.
 
-        int sayi = 0;
+        /* int sayi = 0;
         int enBuyuk = 0;
 
         for (; ; )
@@ -66,7 +66,7 @@ class Program
             if (sayi > enBuyuk) enBuyuk = sayi;
         }
 
-        System.Console.WriteLine($"En büyük sayı: {enBuyuk}");
+        System.Console.WriteLine($"En büyük sayı: {enBuyuk}"); */
 
         /* 
             ÖDEV: (Aşağıdaki işleri for, while ve do while kullanarak ayrı ayrı yapınız.)
@@ -74,6 +74,18 @@ class Program
             2)Ekrana çarpım tablosunu yazdırınız. 
             3)Ekrandan girilen herhangi bir ifadeyi ilk harfinden başlayıp sırasıyla ve satır satır birer harf arttırarak alt alta yazdır.
          */
+        Console.Write("Bir sözcük giriniz: ");
+        string sozcuk = Console.ReadLine();
+        for (int i = 0; i < sozcuk.Length; i++)
+        {
+            Console.WriteLine(sozcuk.Substring(0, i + 1).ToUpper());
+
+        }
+        for (int i = sozcuk.Length - 1; i >= 1; i--)
+        {
+            Console.WriteLine(sozcuk.Substring(0, i).ToUpper());
+        }
+
 
     }
 }
