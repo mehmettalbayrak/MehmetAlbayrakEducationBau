@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sup</title>
+    <style>
+        div {
+            padding: 10px;
+
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+            color: darkred;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Register</h1>
+    <form action=""> <!--Action: Backend kısmı için-->
+        <div><label for="">Ad Soyad:</label>
+            <input type="text">
+        </div>
+
+        <div><label for="">E-Mail:</label>
+            <input type="email">
+        </div>
+
+        <div><label for="">Fotoğraf:</label>
+            <input type="file">
+        </div>
+        <!-- <input type="color"> -->
+
+        <div><label for="">Şifre:</label>
+            <input type="password">
+        </div>
+
+        <div><label for="">Sinema</label>
+            <input type="checkbox">
+        </div>
+
+        <div><label for="">Tiyatro</label>
+            <input type="checkbox">
+        </div>
+
+        <div><label for="">Spor</label>
+            <input type="checkbox">
+        </div>
+
+        <div>
+            <label for="">Cinsiyet</label>
+            <label for="">Kadın</label>
+            <input type="radio" name="Cinsiyet">
+            <label for="">Erkek</label>
+            <input type="radio" name="Cinsiyet">
+        </div>
+
+        <div>
+            <label for="">Medeni Durum</label>
+            <label for="">Evli</label>
+            <input type="radio" name="medeniDurum">
+            <label for="">Bekar</label>
+            <input type="radio" name="medeniDurum">
+        </div>
+
+        <div>
+            <label for="">Şehir</label>
+            <select name="" id="">
+                <option value="">İstanbul</option>
+                <option value="">Ankara</option>
+                <option value="">İzmir</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Doğum Tarihi</label>
+            <input type="date">
+            <input type="datetime-local">
+        </div>
+
+        <div>
+            <input type="submit" value="Save">
+            <input type="button" value="Cancel">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+
+</html>
