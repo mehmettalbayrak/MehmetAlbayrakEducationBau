@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    p::first-line {
+        font-weight: bold;
+        color: brown;
+        word-spacing: 5px;
+        /* letter-spacing: 5px; */
+    }
+
+    p.about::first-line {
+        color: burlywood;
+    }
+
+    p::first-letter {
+        font-size: 28px;
+    }
+
+    ::selection {
+        background-color: cadetblue;
+    }
+
+    p::after{
+        font-size: 50px;
+        content: "Maraba";
+    }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur asperiores porro aperiam earum repudiandae nam quaerat, blanditiis facilis nihil officiis libero pariatur aut neque repellendus dignissimos ab doloribus et veritatis.</p>
+    <p class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sed incidunt, dolore, illum, laboriosam aspernatur quod voluptas similique culpa aliquam consequuntur cupiditate. Illum voluptatibus doloremque, enim tempora vero quo recusandae.</p>
+
+    
+</body>
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Tilt+Neon&family=Yanone+Kaffeesatz:wght@300&display=swap"
+    rel="stylesheet">
+
+</html>

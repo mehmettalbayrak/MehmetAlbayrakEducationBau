@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #main-header {
+            background-color: darkolivegreen;
+            padding: 10px;
+
+        }
+
+        #main-nav {
+            display: inline-block;
+            color: white;
+            text-align: right;
+            width: calc(100% - 85px);
+        }
+
+        #login-button {
+            background-color: darkslategray;
+            border: 1px solid gray;
+
+        }
+
+        #login-button a:hover {
+            background-color: darkolivegreen;
+            border-radius: 20px;
+        }
+
+        #show-case {
+            background: url("images/home-bg.jpeg");
+            background-position: center;
+            color: darkolivegreen;
+            height: 75vh;
+            padding: 10px;
+
+        }
+
+        #how-it-works {
+            background-color: darkolivegreen;
+            color: white;
+            padding: 10px;
+        }
+
+        #main-nav-items {
+            list-style-type: none;
+
+        }
+
+        .main-nav-item {
+            display: inline-block;
+            width: 120px;
+            border: 1px solid gray;
+            background-color: darkgreen;
+            height: 25px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .main-nav-item:hover {
+            background-color: darkolivegreen;
+        }
+
+        .main-nav-item a {
+            color: white;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding: 3px;
+
+        }
+
+        #brand {
+            text-decoration: none;
+            color: white;
+            font-size: 120%;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main-header">
+        <a href="/" id="brand">MovieApp</a>
+        <nav id="main-nav">
+            <ul id="main-nav-items">
+                <li class="main-nav-item"><a href="#">Home</a></li>
+                <li class="main-nav-item"><a href="#">Movies</a></li>
+                <li class="main-nav-item"><a href="#">Contact</a></li>
+                <li id="login-button" class="main-nav-item"><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="show-case">
+            <h1>Welcome to MovieApp</h1>
+        </section>
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+        </section>
+    </main>
+</body>
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Tilt+Neon&family=Yanone+Kaffeesatz:wght@300&display=swap"
+    rel="stylesheet">
+
+</html>

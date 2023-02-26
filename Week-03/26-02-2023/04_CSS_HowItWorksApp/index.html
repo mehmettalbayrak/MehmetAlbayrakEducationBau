@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #main-header {
+            background-color: darkolivegreen;
+            padding: 10px;
+
+        }
+
+        #main-nav {
+            display: inline-block;
+            color: white;
+            text-align: right;
+            width: calc(100% - 75px);
+        }
+
+        #login-button {
+            background-color: darkslategray;
+            border: 1px solid gray;
+
+        }
+
+        #login-button a:hover {
+            background-color: darkolivegreen;
+            border-radius: 20px;
+        }
+
+        #show-case {
+            background: url("images/home-bg.jpeg");
+            background-position: center;
+            color: darkolivegreen;
+            height: 75vh;
+            padding: 10px;
+
+        }
+
+        #how-it-works {
+            background-color: darkolivegreen;
+            color: white;
+            padding: 10px;
+        }
+
+        .row {
+            margin-bottom: 40px;
+        }
+
+        .row h2 {
+            padding-top: 5px;
+        }
+
+        .row p {
+            padding-top: 8px;
+        }
+
+        .col {
+            display: inline-block;
+            width: 30%;
+            padding: 16px;
+            margin: 8px;
+            text-align: center;
+        }
+
+        #main-nav-items {
+            list-style-type: none;
+
+        }
+
+        .main-nav-item {
+            display: inline-block;
+            width: 120px;
+            border: 1px solid gray;
+            background-color: darkgreen;
+            height: 25px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .main-nav-item:hover {
+            background-color: darkolivegreen;
+        }
+
+        .main-nav-item a {
+            color: white;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding: 3px;
+
+        }
+
+        #brand {
+            text-decoration: none;
+            color: white;
+            font-size: 120%;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main-header">
+        <a href="/" id="brand"><i class="fa-solid fa-house"></i> MovieApp</a>
+        <nav id="main-nav">
+            <ul id="main-nav-items">
+                <li class="main-nav-item"><a href="#">Home</a></li>
+                <li class="main-nav-item"><a href="#">Movies</a></li>
+                <li class="main-nav-item"><a href="#">Contact</a></li>
+                <li id="login-button" class="main-nav-item"><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="show-case">
+            <h1>Welcome to MovieApp</h1>
+        </section>
+        <section id="how-it-works">
+            <div class="row">
+                <h2>How It Works</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ullam autem labore molestias, pariatur
+                    saepe.</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Register</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui mollitia expedita quibusdam nihil
+                        vero sed quo nam quia sunt. Mollitia, sequi suscipit exercitationem assumenda architecto tempora
+                        excepturi similique unde autem.</p>
+                </div>
+                <div class="col">
+                    <h3>Choose a plan</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde a cumque sunt? Quia, magnam placeat
+                        odio cum reiciendis quo mollitia cupiditate voluptate, id omnis voluptatum dolorum pariatur non
+                        quod asperiores!</p>
+                </div>
+                <div class="col">
+                    <h3>Enjoy movie</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto temporibus perspiciatis ratione
+                        porro unde aspernatur delectus ullam consequatur cum, consequuntur nulla. Aut illo saepe sit
+                        nisi ipsa labore iusto quis?</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Tilt+Neon&family=Yanone+Kaffeesatz:wght@300&display=swap"
+    rel="stylesheet">
+
+</html>

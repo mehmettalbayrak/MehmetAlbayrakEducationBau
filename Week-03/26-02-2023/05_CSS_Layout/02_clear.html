@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-family: 'Roboto Condensed', sans-serif;
+
+    }
+
+    #container {
+        background-color: darkcyan;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: darkorange;
+        margin: 5px;
+        float: right;
+        text-align: center;
+        color: white;
+    }
+
+    #box1 {
+        float: left;
+    }
+
+    .clear-fix::after{
+        content:"";
+        display: block;
+        clear: both;
+    }
+</style>
+
+<body>
+    <div id="container" class="clear-fix">
+        <div class="box" id="box1">BOX1</div>
+        <div class="box">BOX2</div>
+        <div class="box">BOX3</div>
+        <!-- <div style="clear: both;"></div> -->
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, voluptas dolorem. Odio sint earum, iusto velit illum voluptatum sit dolores qui deserunt provident nam laboriosam quo laudantium doloribus. Mollitia, vitae.</p>
+<div class="clear-fix">
+    <div class="box">BOX4</div>
+    <div class="box">BOX5</div>
+    <div class="box">BOX6</div>
+</div>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius excepturi iure ea delectus similique atque. Fuga id quaerat, corporis exercitationem consequuntur labore vero excepturi facilis incidunt nihil accusantium vel cum?</p>
+
+</body>
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Tilt+Neon&family=Yanone+Kaffeesatz:wght@300&display=swap"
+    rel="stylesheet">
+
+</html>
