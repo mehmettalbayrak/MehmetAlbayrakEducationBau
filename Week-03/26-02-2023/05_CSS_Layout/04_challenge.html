@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <style>
+
+
      * {
         font-family: 'Roboto Condensed', sans-serif;
         margin: 0;
@@ -14,53 +16,82 @@
         box-sizing: border-box;
     }
 
+    #container {
+        width: 80%;
+        margin: 15px auto;
+    }
     
     #main {
-        border: 2px solid red;
+        height: 30vh;
     }
     #header {
-        border: 2px solid yellow;
         display: block;
         background-color: darkorchid;
-        color:orange;
+        color:white;
         padding-left: 15px;
     }
-    ul {
-        text-decoration: none;
-        margin: 10px;
-        padding: 15px;
+    #menu ul {
+        padding-right: 15px;
+        list-style-type: none;       
         
     }
 
-    li {
+    #menu li {
     text-decoration: none;
-    margin: 20px;
+    padding: 8px;
     background-color: darkmagenta;
-    color: white;
-    
-    
+    color: white; 
     }
-    .clear-fix {
+
+    #menu {
+        float: left;
+        width: 22%;
+    }
+    
+    .clearfix::after{
         content: "";
         display: block;
         clear: both;
-        width: 25px;
+    }
+
+    #content {
+        float: right;
+        width: 80%;
+        display: block;
+    }
+
+    #footer {
+        float: left;
+        display: block;
+        background-color: darkorchid;
+        color: white;
     }
 </style>
 <body>
-    <div id="main">
-        <div id="header">
-            <h1>Frontend Dersleri</h1>
+    <div id="container">
+        <div id="main" class="clearfix">
+            <div id="header">
+                <h1>Frontend Dersleri</h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <div id="content">
+                    <h2>Frontend Developer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem culpa delectus vitae quo sint odit
+                        excepturi labore! Omnis quidem rerum eligendi architecto eos sapiente dolorem mollitia repudiandae
+                        repellendus, vitae libero!</p>
+                </div>
+            </div>
         </div>
-        <div id="menu">
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-            <div class="clear-fix"></div>
+        <div id="footer">
+            <h4>BAU Bright öğrencileri tarafından tasarlanmıştır.</h4>
         </div>
     </div>
+    
 </body>
 <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Tilt+Neon&family=Yanone+Kaffeesatz:wght@300&display=swap"
