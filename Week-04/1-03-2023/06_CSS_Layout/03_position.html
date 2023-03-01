@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        padding-left: 50px;
+        padding-top: 50px;
+    }
+    div {
+        font-size: 16px;
+        border: 1px solid black;
+        width: 90px;
+        height: 80px;
+        padding: 0;
+        padding-top: 30px;
+        text-align: center;
+        /* position: static; */
+
+    }
+
+    #div1 {
+        background-color: darkcyan;
+    }
+
+    #div2 {
+        /* Relative normal akışı bozmadan devam eder. Dört kenardan da konumlandırma yapılabilir. Konumlandırma değerleri elementin normal akıştaki konumunu merkez ya da orijin ya da başlangıç noktası olarak kabul eder. */
+        /* position: relative;
+        top: 50px;
+        left: 50px; */
+        background-color: darkgoldenrod;
+        /* Absolute: normal akıştan çıkar ve bağımsız olur. Ve dört kenardan da konumlandırma yapar. Fakat kendi konumuna göre değil sayfanın başlagıcından kendini konumlandırır. */
+        position: absolute;
+        top: 50px;
+        left: 50px;
+
+    }
+
+    #div3 {
+        background-color: darkgray;
+    }
+
+</style>
+<body>
+    <!--Position: static, relative, absolute, sticky, fixed değerlerini alır.-->
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+</body>
+</html>
