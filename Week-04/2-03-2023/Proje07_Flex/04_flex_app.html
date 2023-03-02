@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        #container {
+            width: 80%; 
+        }
+
+        #main-header {
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            color: white;
+            background-color: blue;
+            font-size: 1.5rem;
+        }
+
+        #main-content {
+            display: flex;
+        }
+
+        #main-content-left {
+            width: 25%;
+
+        }
+
+        #main-menu {
+            list-style-type: none;
+            padding: 10px;
+            background-color:darkorange;
+            height: 60vh;
+            color: white;
+        }
+
+        #main-content-right {
+            padding: 15px;
+        }
+
+        #footer {
+            background-color: brown;
+            text-align: center;
+            font-size: 1.2rem;
+            color: white;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="main-header">
+            <h1 id="main-title">Frontend Dersleri</h1>
+        </header>
+
+        <main id="main-content">
+            <div id="main-content-left">
+                <ul id="main-menu">
+                    <li class="main-menu-item">HTML</li>
+                    <li class="main-menu-item">CSS</li>
+                    <li class="main-menu-item">JavaScript</li>
+                </ul>
+            </div>
+            <div id="main-content-right">
+                <h1>FrontEnd Developer</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea repellat, facilis nemo reiciendis iusto pariatur dignissimos distinctio, natus vero, rem in accusantium odit placeat magnam assumenda similique! Praesentium, tempora reprehenderit!</p>
+            </div>
+        </main>
+        <footer id="footer">
+            <div>BAU Bright öğrencileri tarafından tasarlanmıştır.</div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        /* flex-direction: row; bu özellik default olarak row özelliğine sahiptir. bu da içindeki elemanların tek bir satırda yer almasını sağlar.    
+        eğer bir satırda deği de bir sütun boyunca bu elemanlar sıralansın istiyorsak bu özelliğe bir column değeri atanır.*/
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column-reverse; */
+        /* flex-wrap: nowrap; default hali */
+        /* flex-wrap: wrap; böler. sığmayan kısmı aşağıya atar. */
+        /* flex-wrap: wrap-reverse; */
+        
+
+    }
+
+    .item {
+        background-color: blue;
+        color: white;
+        padding: 30px;
+        margin: 20px;
+        font-size: 25px;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="item">
+            item1
+        </div>
+        <div class="item">
+            item2
+        </div>
+        <div class="item">
+            item3
+        </div>
+        <div class="item">
+            item4
+        </div>
+        <div class="item">
+            item5
+        </div>
+    </div>
+</body>
+</html>
