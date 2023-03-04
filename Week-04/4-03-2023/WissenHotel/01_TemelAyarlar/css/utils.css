@@ -1,0 +1,78 @@
+/* Renk Tanımları  */
+:root {
+    --white: #FFF;
+    --primary: #007BFF;
+    --secondary: #6c757d;
+    --success: #28a745; 
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b8;
+    --dark: #343a40;
+    --light: #f8f9fa;
+}
+/* text color  */
+.text-white{color: var(--white)}
+.text-white{color: var(--primary)}
+.text-white{color: var( --secondary)}
+.text-white{color: var( --success)}
+.text-white{color: var(--danger)}
+.text-white{color: var(--warning)}
+.text-white{color: var(--info)}
+.text-white{color: var(--dark)}
+.text-white{color: var(--light)}
+
+/* background color  */
+
+.bg-text-white{background-color: var(--white)}
+.bg-text-white{background-color: var(--primary)}
+.bg-text-white{background-color: var( --secondary)}
+.bg-text-white{background-color: var( --success)}
+.bg-text-white{background-color: var(--danger)}
+.bg-text-white{background-color: var(--warning)}
+.bg-text-white{background-color: var(--info)}
+.bg-text-white{background-color: var(--dark)}
+.bg-text-white{background-color: var(--light)}
+
+/* buttons  */
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: .5rem;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-primary {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.btn-secondary {
+    color: var(--white);
+    background-color: var(--secondary);
+}
+
+.btn-success {
+    color: var(--white);
+    background-color: var(--success);
+}
+
+.btn-danger {
+    color: var(--danger);
+    background-color: var(--danger);
+}
+
+.btn-warning {
+    color: var(--warning);
+    background-color: var(--warning);
+}
+
+.btn-dark {
+    color: var(--dark);
+    background-color: var(--dark);
+}
