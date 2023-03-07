@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:    "header header header"
+                                    "sidebar content box2"
+                                    "sidebar content ."
+                                    "box1 box1 box1"
+                                    "footer footer footer";
+            gap: 5px;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: red;
+        }
+
+        .side-bar {
+            grid-area: sidebar;
+            background-color: yellow;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: darkcyan;
+        }
+
+        .box-1 {
+            grid-area: box1;
+            background-color: aqua;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Bright Eğitimi</h2>
+        </div>
+        <section class="content">
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis atque laudantium rem accusamus,
+                debitis unde corporis est aliquid soluta magnam aliquam expedita accusantium eius earum. Ipsa
+                repellendus qui fuga commodi?</p>
+        </section>
+        <section class="side-bar">
+            <h2>SIDE BAR.</h2>
+            <ul>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+                <li>Lorem, ipsum.</li>
+            </ul>
+        </section>
+        <div class="box-1">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, quibusdam soluta! Modi ipsam facere
+            facilis dolore necessitatibus sequi odio reiciendis fugiat eos eligendi illo, laboriosam adipisci maiores
+            consequatur vero tempore? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit dolore iure
+            deleniti
+            nam illum nulla nisi veniam, animi sint alias quod, quos magnam natus eligendi soluta repellendus aliquam
+            recusandae sequi quaerat molestiae magni delectus. Harum eius amet tenetur, ea unde eaque dolorem delectus
+            iste
+            quibusdam, assumenda doloribus? Commodi culpa facilis ullam possimus, quas libero ipsam autem suscipit nobis
+            dolore minus. Dolorem earum eum repudiandae, accusantium sapiente laborum voluptatibus quo dolor
+            reprehenderit
+            rerum fuga quasi odio voluptatum eligendi officiis qui quae aliquam aliquid! Ab voluptate laudantium,
+            molestiae
+            aliquam autem explicabo beatae id necessitatibus veritatis tempore, molestias magni iste cupiditate atque
+            nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aperiam eum exercitationem officia
+            accusantium magnam impedit, iusto itaque dolore numquam deserunt odit soluta cum dolor animi rem neque
+            distinctio reprehenderit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi pariatur
+            doloribus! Corporis quo commodi magnam ipsa rem! Cumque impedit molestias ut repellendus sequi sunt dicta in
+            ullam, possimus placeat sed vitae eveniet commodi error quasi, nobis earum consectetur accusantium dolores
+            cupiditate culpa ex. Quisquam, voluptatem inventore. Neque natus corrupti facilis omnis ab aspernatur illum
+            beatae quod nam at doloremque laudantium debitis vel tempora blanditiis hic sunt, quis cumque quaerat. Quo
+            eveniet ullam fugiat excepturi, voluptate ipsam culpa sapiente blanditiis eos fugit hic molestias facilis
+            architecto at eaque aspernatur, id numquam laudantium! Laudantium, deserunt placeat! Ad laudantium
+            dignissimos
+            voluptatem fuga.
+        </div>
+        <div class="box-2">
+            BOX2 ipsum dolor sit, amet consectetur adipisicing elit. Similique, quibusdam soluta! Modi ipsam facere
+            facilis dolore necessitatibus sequi odio reiciendis fugiat eos eligendi illo, laboriosam adipisci maiores
+            consequatur vero tempore?
+        </div>
+        <div class="box-3">
+            BOX3 ipsum dolor sit, amet consectetur adipisicing elit. Similique, quibusdam soluta! Modi ipsam facere
+            facilis dolore necessitatibus sequi odio reiciendis fugiat eos eligendi illo, laboriosam adipisci maiores
+            consequatur vero tempore?
+        </div>
+        <footer class="footer">
+            <p>Copyright &copy 2023</p>
+        </footer>
+    </div>
+</body>
+
+</html>
