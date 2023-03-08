@@ -1,0 +1,11 @@
+  a {
+      text-decoration: none;
+      color: white;
+  }
+
+  #showcase {
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),url(/images/home-bg.jpeg);
+      background-position: center;
+      background-size: cover;
+      height: 70vh;
+  }

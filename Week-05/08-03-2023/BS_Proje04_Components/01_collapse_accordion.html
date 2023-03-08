@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <a href="#content" class="btn btn-success me-3" data-bs-toggle="collapse">Tıkla</a>
+        
+        <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#content">Bana da tıkla</button>
+        <p id="content" class="collapse">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim placeat omnis
+            ullam
+            deleniti, numquam rem quas minus quo porro ex labore temporibus natus voluptates earum dolor dolores
+            doloribus sunt
+            minima.</p>
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="accordion" id="sorular">
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="kimiz">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#buyuz" aria-expanded="false" aria-controls="buyuz">Biz Kimiz?</button>
+            </h2>    
+            <div id="buyuz" class="collapse accordion-collapse show" data-bs-parent="buyuz">
+                <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat rem vero eum perferendis delectus impedit facilis magni sequi fugiat ad. Placeat, iusto voluptatem tempore velit facilis tenetur eum sit ratione.
+                </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="soru-2">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#cevap-2" aria-expanded="false"
+                        aria-controls="cevap-2">Soru-2</button>
+                </h2>
+                <div id="cevap-2" class="collapse accordion-collapse" data-bs-parent="#kimiz">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat rem vero eum perferendis delectus impedit
+                        facilis magni sequi fugiat ad. Placeat, iusto voluptatem tempore velit facilis tenetur eum sit ratione.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="soru-3">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#cevap-3" aria-expanded="false"
+                        aria-controls="cevap-3">Soru-3</button>
+                </h2>
+                <div id="cevap-3" class="collapse accordion-collapse" data-bs-parent="#buyuz">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat rem vero eum perferendis delectus impedit
+                        facilis magni sequi fugiat ad. Placeat, iusto voluptatem tempore velit facilis tenetur eum sit ratione.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
