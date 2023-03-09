@@ -1,0 +1,22 @@
+.bg-body-tertiary {
+    background-color: #085e7d!important; 
+}
+
+
+a {
+    color: white !important;
+}
+
+a:hover {
+    color: black !important;
+}
+
+button {
+   background-color: #085e7d !important; 
+   border-color: #085e7d !important;
+}
+
+button:hover {
+    background-color: rgb(8, 94, 125, 0.9) !important;
+    border-color: rgb(8, 94, 125, 0.9) !important;
+}
