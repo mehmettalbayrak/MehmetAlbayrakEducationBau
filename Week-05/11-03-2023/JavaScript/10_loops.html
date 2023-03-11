@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //while
+        // let i=0;
+        // while (i<10) {
+        //     //i 10dan küçük olduğu sürece.
+        //     console.log(i);
+        //     i++;
+        // }
+
+        // let i = 1;
+        // do {
+        //     console.log(i);
+        //     i++;
+        // } while (i <= 10);
+
+        // for (let i = 0; i <= 10; i++) {
+        //     console.log(i + ".JavaScript")
+        // }
+
+        // let toplam = 0;
+        // for (let i = 0; i <= 10; i++) {
+        //     toplam += i;
+        // }
+        // console.log("Toplam: ", toplam);
+
+        // Kullanıcının gireceği üç sayıyı toplayıp sonucu ekrana yazdıran kod
+
+        let sayilar = [];
+        let sayi;
+        let toplam = 0;
+        for (let i = 0; i < 3; i++) {
+            sayi = parseInt(prompt(`${i + 1}. sayıyı giriniz: `))
+            sayilar.push(sayi);
+            toplam += sayi;
+        }
+
+        console.log(sayilar);
+        console.log(toplam);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let product1 = {
+            id: 1,
+            name: "iPhone 13",
+            price: 42000
+        }
+
+        let product2 = {
+            id: 2,
+            name: "iPhone 14",
+            price: 48000
+        }
+
+        let product3 = {
+            id: 3,
+            name: "iPhone 15",
+            price: 50000
+        }
+
+        if (product3.price >= 40000) {
+            product3.price = 40000
+        }
+
+        if (!product2.isApproved) {
+            alert("Onaylı");
+        }
+
+        let products = [product1, product2, product3]
+        console.log(products);
+    </script>
+</body>
+
+</html>

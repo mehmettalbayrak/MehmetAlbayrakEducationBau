@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // let urunler = [];
+        // urunler[0] = "iPhone 13";
+        // urunler[1] = "Samsung Oddysey G5"
+        // urunler[2] = "PlayStation 5"
+        // urunler[0] = 1;
+        // urunler[1] = "iPhone 13";
+        // urunler[2] = 45248;
+        // let urun1 = [1, "Monster Tulpar", 30000];
+        // let urun2 = [2, "iPhone 13", 45000];
+        // let urun3 = [3, "Samsung Oddysey", 6000];
+
+        // let urunler = [urun1, urun2, urun3];
+
+        // let baslik = "Full Stack Programlama";
+        // let baslikDizi = baslik.split(" ");
+        // console.log(baslikDizi);
+        // let baslikMetin = baslikDizi.toString();
+
+        // console.log(baslikMetin);
+        // let baslikJoin = baslikDizi.join(" ");
+        // console.log(baslikJoin);
+
+        // console.log(urunler, typeof urunler);
+        // console.log(urunler.length);
+
+
+        // let fruits = ["Elma", "Armut", "Üzüm"];
+        // // fruits[fruits.length] = "Karpuz"
+        // fruits.push("Karpuz");
+        // fruits.pop(); //en sondaki elemanı siler.
+        // fruits.unshift("Karpuz")//En başa eleman ekler.
+        // console.log(fruits);
+
+        let sonuc;
+        let brands1 = ["Mazda", "Toyota", "Mercedes"];
+        let brands2 = ["Volvo", "Ford"];
+        let brands3 = ["BMW"];
+
+        console.log("Markalar: ", brands1);
+        console.log("Markalar1: ", brands2);
+        console.log("Markalar2: ", brands3);
+
+        sonuc = brands1.concat(brands2);
+        sonuc = brands1.concat(brands2, brands3);
+        // sonuc = sonuc.splice(4);
+        let silinenElemanlar = sonuc.splice(2, 3);
+        console.log(sonuc);
+
+    </script>
+</body>
+
+</html>

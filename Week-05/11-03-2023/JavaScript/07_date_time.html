@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let sonuc;
+        let simdi = new Date();
+        sonuc = simdi;
+        sonuc = simdi.getDate();
+        sonuc = simdi.getDay();
+        sonuc = simdi.getMonth();
+        sonuc = simdi.getHours();
+
+        let tarih = new Date(2023, 0, 1);
+        sonuc = tarih;
+        sonuc = tarih.getMonth();
+
+        sonuc = simdi;
+        sonuc.setFullYear(2015);
+        sonuc.setMonth(0);
+
+        let suan = new Date();
+        sonuc = suan;
+        let kacYilSonra = 5;
+        sonuc = new Date(suan.getFullYear() + kacYilSonra, suan.getMonth(), suan.getDate());
+
+        sonuc = simdi;
+        let dogumTarihi = new Date(1995, 9, 30);
+        let ms = dogumTarihi - simdi;
+
+        console.log(ms );
+    </script>
+</body>
+
+</html>

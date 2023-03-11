@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let kurs = "Bahçeşehir Üniversitesi Wissen Akademie Full Stack Programlama Eğitimi"
+        let sonuc;
+        sonuc = kurs.toLowerCase();
+        sonuc = kurs.toLocaleLowerCase();
+        console.log(sonuc);
+
+        sonuc = kurs.length;
+        sonuc = kurs[18];
+
+        sonuc = kurs.slice(0, 5);
+        sonuc = kurs.slice(80, 85);
+        sonuc = kurs.slice(40);
+        console.log(sonuc)
+
+        let cumle = prompt("bir cümle gir");
+        let cumleDizi = cumle.split(" ");
+        let sozcukSayisi = cumleDizi.length;
+
+        console.log(sozcukSayisi);
+
+    </script>
+</body>
+
+</html>
