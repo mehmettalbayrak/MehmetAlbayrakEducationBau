@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo App</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div id="title" class="card-header text-danger text-center fs-3 fw-bold">
+                        Yapılacaklar Listesi
+                    </div>
+                    <div class="card-body mt-1">
+                        <form>
+                            <div class="input-group">
+                                <input type="text" id="text-task-description" class="form-control">
+                                <button type="submit" class="btn btn-success" id="btn-task-add">Ekle</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card mt-3">
+                    <ul id="task-list" class="list-group">
+                        <li class="task list-group-item DENEME-CLASS" id="al-sana-id" width="125">
+                            <div class="form-check">
+                                <input type="checkbox" id="111" class="form-check-input">
+                                <label for="111" class="form-check-label">Görev Deneme</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- <li class="task list-group-item">
+    <div class="form-check">
+        <input type="checkbox" id="1" class="form-check-input">
+        <label for="1" class="form-check-label">Görev 1</label>
+    </div>
+</li> -->
