@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>ToDo App V2</h1>
+      <div id="input-task">
+        <input type="text" name="" id="input-new-task" />
+        <button id="btn-new-task">Ekle</button>
+      </div>
+    </div>
+    <div >
+      <button id="btn-clear">Tümünü Temizle</button>
+    </div>
+    <div id="tasks">
+      <ul id="tasks-list">
+        <li class="task-container">
+          <div class="task-header">
+            <input class="task-check" type="checkbox">
+            <input class="task-input" type="text" value="Spotify Ödemesini Yap" disabled>
+          </div>
+          <div class="btn-group">
+            <button class="btn-edit">
+              Düzenle
+            </button>
+            <button class="btn-delete">
+              Sil
+            </button>
+          </div>
+        </li>
+        <li class="task-container">
+         <div class="task-header">
+          <input class="task-check" type="checkbox">
+          <input class="task-input" type="text" value="Netflix Ödemesini Yap" disabled>
+         </div>
+          <div class="btn-group">
+            <button class="btn-edit">
+              Düzenle
+            </button>
+            <button class="btn-delete">
+              Sil
+            </button>
+          </div>
+        </li>
+        <li class="task-container">
+          <div class="task-header">
+            <input class="task-check" type="checkbox">
+            <input class="task-input" type="text" value="Blu TV Ödemesini Yap" disabled>
+          </div>
+          <div class="btn-group">
+            <button class="btn-edit">
+              Düzenle
+            </button>
+            <button class="btn-delete">
+              Sil
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
