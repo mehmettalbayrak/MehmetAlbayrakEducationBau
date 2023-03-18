@@ -23,7 +23,7 @@ btnClear.addEventListener("click", clearAll);
 
 function addNewTask(e) {
     e.preventDefault()
-    let value = inputTaskName.value.trim();
+    let value = inputTaskName.value.trim()
     if (value != "") {
         if (!isEditMode) {
             //Eğer yeni kayıt modundaysan
@@ -31,10 +31,10 @@ function addNewTask(e) {
             taskListArray.push(
                 {
                     "id": id,
-                    "name": value,
+                    "name": inputTaskName.value,
                     "status": "pending"
                 }
-            );
+            )
         } else {
             //Eğer edit ya da düzenleme modundaysa
         }
@@ -53,70 +53,43 @@ function clearAll() {
 function displayTasks() {
     //Bu function HER İHTİYAÇ duyulduğunda tüm görevleri yeniden ekranda göstermek için kullanılacak.
     taskList.innerHTML = ""; //Bu komut html'de yazılı olan bilgileri sayfadan siler. Bu örnekte li lerimiz.
-    if (taskListArray.length == 0) {
+    if (taskListArray.length === 0) {
         taskList.innerHTML = '<div class="alert">Burada görev bulunmamaktadır!</div>'
-    } else {
-        for (let task of taskListArray) { //taskListArray'de dönüp dönen elemanları task yapar.
-            let completed = task.status == "completed" ? "checked" : ""; //task status eğer completed ise checked yap değilse boş bırak.
-            if (filterMode == 'all') {
-                let taskLi = `
+    }
+    for (let task of taskListArray) { //taskListArray'de dönüp dönen elemanları task yapar.
+        let completed = task.status == "completed" ? "checked" : ""; //task status eğer completed ise checked yap değilse boş bırak.
+        if (filterMode == 'all') {
+            let taskLi = `
             <li class="task-container">
           <div class="task-header">
             <input onclick="updateStatus(this);" class="task-check" type="checkbox" id="${task.id}" ${completed}>
             <input id = "_${task.id}" class="task-input ${completed}" type="text" value="${task.name}" disabled>
           </div>
           <div class="btn-group">
-            <button id="${task.id}" onclick="updateTask(this);" class="btn-edit">Düzenle</button>
-            <button id="${task.id}" onclick="deleteTask(this);" class="btn-delete">Sil</button>
+            <button onclick="updateTask(${task.id});" class="btn-edit">
+              Düzenle
+            </button>
+            <button onclick="deleteTask(${task.id})"; class="btn-delete">
+              Sil
+            </button>
           </div>
         </li> 
         `;
-                taskList.insertAdjacentHTML("beforeend", taskLi) //Her eklenen yeni görevin nereye ekleneceğini belirleriz. Before end eklenecek yer olarak belirtilen elementin kapanış taginin öncesine eklemesini sağlar. beforeend gibi 3 tane daha var bunlar da başlangıçtan sonra ya da önce ya da kapanıştan sonra ya da önce.
-            }
-
+            taskList.insertAdjacentHTML("beforeend", taskLi) //Her eklenen yeni görevin nereye ekleneceğini belirleriz. Before end eklenecek yer olarak belirtilen elementin kapanış taginin öncesine eklemesini sağlar. beforeend gibi 3 tane daha var bunlar da başlangıçtan sonra ya da önce ya da kapanıştan sonra ya da önce.
         }
-    }
 
+    }
 }
 
 
 function updateStatus(selectedTask) {
-    
+    let updatedTaskId;
     let newStatus = selectedTask.checked ? "completed" : "pending";
     for (const i in taskListArray) {
         if (selectedTask.id == taskListArray[i].id) {
             taskListArray[i].status = newStatus;
         }
     }
-    displayTasks();
+    displayTasks(filterMode);
 }
-
-function updateTask(clickedButton) {
-    let editedTask = clickedButton.parentElement.previousElementSibling.lastElementChild;
-    const liList = document.querySelectorAll(".task-container");
-    for (const li of liList) {
-        if (clickedButton.id != li.id) {
-            li.firstElementChild.lastElementChild.setAttribute("disabled", "disabled");
-            li.lastElementChild.firstElementChild.innerText = "Düzenle";
-            li.lastElementChild.firstElementChild.classList.remove("clicked-button");
-        } else {
-            if (li.lastElementChild.firstElementChild.innerText == "Kaydet") {
-                li.firstElementChild.lastElementChild.setAttribute("disabled", "disabled");
-                li.lastElementChild.firstElementChild.innerText = "Düzenle";
-                li.lastElementChild.firstElementChild.classList.remove("clicked-button");
-            } else {
-                li.firstElementChild.lastElementChild.removeAttribute("disabled");
-                li.lastElementChild.firstElementChild.innerText = "Kaydet";
-                li.lastElementChild.firstElementChild.classList.add("clicked-button");
-            }
-        }
-
-    }
-    clickedButton.classList.add("clicked-button");
-    editedTask.removeAttribute("disabled");
-    editedTask.focus();
-    
-
-}
-
-displayTasks();
+displayTasks(filterMode);

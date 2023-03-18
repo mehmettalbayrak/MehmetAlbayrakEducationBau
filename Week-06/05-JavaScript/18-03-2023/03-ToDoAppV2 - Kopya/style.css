@@ -157,8 +157,3 @@ button:hover {
   background-color: rgb(107, 142, 35, .5)!important;
   color: white!important;
 }
-
-.clicked-button {
-  background-color: blue;
-  color: white;
-}
