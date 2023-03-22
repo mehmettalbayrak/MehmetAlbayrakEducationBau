@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+
+<body>
+    <a id="link" href="https://www.jquery.com">Go jQuery</a> <br> <br>
+    <button onclick="linkChange()">Change</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+       function linkChange () {
+        $("#link").attr("href","https://www.wissenakademie.com");
+        $("#link").text("Go Wissen");
+        $("#link").css("font-size","30px");
+       }
+    </script>
+</body>
+
+</html>

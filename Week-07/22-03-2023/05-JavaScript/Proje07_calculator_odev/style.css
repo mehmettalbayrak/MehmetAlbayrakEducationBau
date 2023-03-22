@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Condensed&family=Tilt+Neon&family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+#container {
+    border: 1px solid gray;
+    width: 50%;
+    border-radius: 5px;
+    font-family: 'Tilt Neon', cursive;
+}
+
+input {
+    width: 99%;
+    height: 50px;
+    background-color: black;
+    border-style: none;
+    border-radius: 1px;
+    color: white;
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+
+}
+
+.islemler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px;
+
+}
+
+.toplama {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.cikarma {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.carpma {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.bolme {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.ust {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px;
+}
+
+.yedi {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.sekiz {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.dokuz {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.yedi {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.orta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px;
+}
+
+.dort {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.bes {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.altı {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.yedi {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.yedi {
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.esit {
+    display: flex;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    width: 60px;
+    height: 180px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
