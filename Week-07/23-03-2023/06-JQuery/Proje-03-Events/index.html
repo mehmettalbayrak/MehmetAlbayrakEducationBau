@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .box {
+            position: relative;
+            left: -60px;
+            text-align: right;
+            width: 50px;
+            background-color: aqua;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Çift Tıkla</button>
+    <div class="box">
+        Selam
+    </div>
+    <label>
+        Ad Soyad:
+    </label>
+    <input type="text" id="ad-soyad" placeholder="Adınızı ve soyadınızı giriniz..">
+    <br>
+    <br>
+
+    <input type="text" id="keypress" placeholder="Keypress event..">
+    <input type="text" id="keydown" placeholder="Keydown event..">
+    <input type="text" id="keyup" placeholder="Keyup event..">
+    <!-- jQuery yükleniyor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Bizim kodlarımız -->
+    <script>
+        //Bu function tüm dom yapısı yüklendikten sonra çalışır. Böylece olası hataların önüne geçmiş oluruz.
+        $(document).ready(function () {
+            $("#ad-soyad").keypress(function () {
+                console.log(e.target);
+            });
+            //Ödev: Hangi tuşa basıldığını kontrol et?
+            //Sadece rakamları girdir.
+
+            $("#keypress").keypress(function () {
+                console.log("Keypress olayı gerçekleşti.")
+            });
+            $("#keydown").keydown(function () {
+                console.log("Keydown olayı gerçekleşti.")
+            });
+            $("#keyup").keyup(function () {
+                console.log("Keyup olayı gerçekleşti.")
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // $("button").click(function() {
+            //     alert("Tek tıklama gerçekleşti.")
+            // });
+            // $("button").dblclick(function () {
+            //     alert("Çift tıklama gerçekleşti.");
+            // });
+            // $("button").mouseleave(function () {
+            //     alert("Mouse buttondan ayrıldı.")
+            // })
+            // $(".box").mouseover(function () {
+            //     $(".box").css("left", "0px")
+            // });
+            // $(".box").mouseleave(function () {
+            //     $(".box").css("left", "-60px")
+            // });
+        })
+    </script>
+</body>
+
+</html>

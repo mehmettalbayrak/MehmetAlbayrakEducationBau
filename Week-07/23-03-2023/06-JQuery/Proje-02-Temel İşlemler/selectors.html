@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: navy;
+        }
+
+        #text {
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        p {
+            color: white;
+            background-color: black;
+            font-weight: bold;
+        }
+
+        div p {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Element
+        Id
+        Class
+    -->
+    <div class="box"></div>
+    <span id="text">Wissen Akademie</span>
+    <span id="text">Wissen Akademie</span>
+    <span id="text">Wissen Akademie</span>
+
+    <div class="box"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut, voluptatem nesciunt eius sit aspernatur odio
+        doloribus deserunt, corporis, totam tempore necessitatibus in repellat est dolor eos repudiandae error sed.</p>
+    <div class="box"></div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut, voluptatem nesciunt eius sit aspernatur odio
+            doloribus deserunt, corporis, totam tempore necessitatibus in repellat est dolor eos repudiandae error sed.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut, voluptatem nesciunt eius sit aspernatur odio
+            doloribus deserunt, corporis, totam tempore necessitatibus in repellat est dolor eos repudiandae error sed.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad aut, voluptatem nesciunt eius sit aspernatur odio
+            doloribus deserunt, corporis, totam tempore necessitatibus in repellat est dolor eos repudiandae error sed.
+        </p>
+    </div>
+
+    <button onclick="textChange()">Text Change</button>
+    <button onclick="boxChange()">Text Change</button>
+    <button onclick="pChange()">Text Change</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        function textChange() {
+            $("#text").css("color", "navy")
+        }
+
+        function boxChange() {
+            $(".box").css("background-color", "red")
+        }
+        function pChange() {
+            $("div p").css("background-color", "brown")
+        }
+
+    </script>
+</body>
+
+</html>

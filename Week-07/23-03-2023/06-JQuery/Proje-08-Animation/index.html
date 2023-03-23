@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            top: 20px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="reset">Reset</button>
+    <br><br>
+    <button id="btn-animate1">Animate 1</button>
+    <button id="btn-animate2">Animate 2</button>
+    <button id="btn-animate3">Animate 3</button>
+    <div></div>
+
+
+
+
+    <!-- jQuery yükleniyor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Bizim kodlarımız -->
+    <script>
+        $(document).ready(function () {
+            $("#btn-animate1").click(function () {
+                $("div").animate({
+                    left: "600px",
+                    opacity: ".5",
+                    height: "150px",
+                    width: "150px",
+                    borderRadius: "+=100%" //50% yapsan da aynısı memo.
+
+                })
+            })
+
+            $("#reset").click(function () {
+                $("div").css({
+                    width: "200px",
+                    height: "200px",
+                    backgroundColor: "yellow",
+                    top: "20px",
+                    position: "relative",
+                    borderRadius: "0px",
+                    opacity: "1",
+                    left: "0px"
+                })
+            })
+            $("#btn-animate2").click(function () {
+                $("div").animate({
+                    left: "500px",
+                    top: "250px",
+                    opacity: "80%",
+                    height: "150px",
+                    width: "150px",
+                    borderRadius: "50%"
+                })
+            })
+        });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

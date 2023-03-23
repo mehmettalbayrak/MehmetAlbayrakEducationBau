@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button id="fade-out">FadeOut</button>
+    <button id="fade-in">FadeIn</button>
+    <button id="fade-toggle">FadeToggle</button>
+    <button id="fade-to">FadeTo</button>
+
+    <!-- Jquery yükleniyor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Bizim kodlarımız -->
+    <script>
+        $(document).ready(function () {
+            $("#fade-out").click(function () {
+                $("div").fadeOut(1000);
+            });
+            $("#fade-in").click(function () {
+                $("div").fadeIn(1000);
+            });
+            $("#fade-toggle").click(function () {
+                $("div").fadeToggle(1000);
+            });
+            $("#fade-to").click(function () {
+                $("div").fadeTo(1000, .1);
+            });
+        });
+        ready
+    </script>
+</body>
+
+</html>
