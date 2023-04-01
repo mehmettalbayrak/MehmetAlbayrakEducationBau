@@ -9,6 +9,16 @@
 -- set Ad = 'Kentsel Dönüşümler'
 
 --Ürünlere 50% zam yapalım.
+--use Northwind
+--UPDATE Products
+--set UnitPrice=UnitPrice*1.5
+
 use Northwind
-UPDATE Products
-set UnitPrice=UnitPrice*1.5
+go
+
+--SELECT *
+--FROM Products p
+--WHERE p.UnitPrice<9
+
+delete Products
+where ProductID=78
