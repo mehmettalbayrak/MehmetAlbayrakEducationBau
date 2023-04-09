@@ -1,4 +1,5 @@
 ﻿#region Komutlar
+//console uyguluması oluşturma: dotnet new console
 // Entity Framework Core paketini yükleme komutu (Sql Server için):
 //dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 //(Sqlite için)
@@ -16,7 +17,7 @@ EFCore Design paketini yükleme komutu:
 dotnet add package Microsoft.EntityFrameworkCore.Design
 
 -Dotnet sql database bağlantı oluşturma:
-dotnet ef dbcontext scaffold "Server=DESKTOP-E30TBPJ;Database=Northwind;User=sa;Password=123;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer --context AppDbContext
+dotnet ef dbcontext scaffold "Server=DESKTOP-E30TBPJ;Database=Northwind;User=sa;Password=123;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer --output-dir Efcore --context AppDbContext
 */
 #endregion
 
