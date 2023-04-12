@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1 style="text-align: center;" class="display-5">Product List</h1>
+
+@if (ViewBag.ProductList.Count>0)
+{
+   <table class="table table-bordered">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Price</td>
+    </tr>
+@foreach (var product in ViewBag.ProductList)
+{
+    <tr>
+        <td>@product.Id</td>
+        <td>@product.Name</td>
+        <td>@product.Price</td>
+    </tr>
+}
+</table> 
+} else
+{
+    <div class="alert alert-warning">
+        Herhangi bir ürün bulunamamıştır.
+    </div>
+}
+
+
+
+@* @foreach (var product in ViewBag.ProductList)
+{
+    <div style="text-align: center;">@product.Name @product.Price</div>
+    
+} *@
+
+@* <p>@ViewBag.product</p> *@
+
