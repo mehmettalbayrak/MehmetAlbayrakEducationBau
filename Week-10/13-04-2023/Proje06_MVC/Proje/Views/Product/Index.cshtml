@@ -1,0 +1,12 @@
+﻿@model List<Product>
+<h1 class="display-6">Products</h1>
+@foreach (var product in Model)
+{
+    <div>@product.Name</div>
+}
+<hr />
+<h1 class="display-6">Categories</h1>
+@foreach (var category in ViewBag.Kategoriler)
+{
+    <div>@category.Name</div>
+}

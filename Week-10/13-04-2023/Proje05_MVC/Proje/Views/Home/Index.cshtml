@@ -1,0 +1,19 @@
+﻿@model ProductsCategories //Küçük harfli model modelin tipini belirtmek için kullanılıyor.
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+<h1>Prodcut List</h1>
+@foreach (var product in Model.Products)
+{
+    <div>
+        @product.Name
+    </div>
+}
+<hr />
+<h1>Category List</h1>
+@foreach (var category in Model.Categories)
+{
+    <div>
+        @category.Name
+    </div>
+}

@@ -1,0 +1,10 @@
+﻿@model List<ProductCategory>
+<h1>Products with Categories</h1>
+@foreach (var pc in Model)
+{
+    <div>
+        <span class="text-danger">@pc.Product.Name</span>
+        <span></span>
+        <span class="text-success">@pc.Category.Name</span>
+    </div>
+}

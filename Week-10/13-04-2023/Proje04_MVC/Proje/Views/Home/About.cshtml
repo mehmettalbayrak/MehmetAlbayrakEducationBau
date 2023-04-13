@@ -1,0 +1,10 @@
+﻿<h1>ViewData</h1>
+<p>@ViewData["Message"]</p>
+
+@foreach(var product in (List<Product>)ViewData["ProductList"]) 
+{
+    <div>
+        @product.Name
+    </div>
+}
+

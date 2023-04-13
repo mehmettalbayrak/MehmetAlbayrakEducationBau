@@ -1,0 +1,33 @@
+﻿@* @Razor operatörü view dosyalarında c# kodu yazmamızı sağlar.
+3 temel kullanım şekli vardır:
+1) Tek kullanımlar: @ifade
+2) Tek satırlık kullanımlar: @(satırın kodları)
+3) Bir scopeluk kullanımlar: @{ istediğimiz gibi c# kodları} 
+*@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <p class="display-6">Sayın @ViewBag.FirstName</p>
+    <h1 class="display-4">@ViewBag.Message</h1>
+    <p>@ViewBag.Day gündür üyemizsiniz!</p>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>
+        Üyeliğiniz
+        <span style="font-weight: bold;" class="@(ViewBag.IsActive ? "text-success" : "text-danger")">
+            @* @(ViewBag.IsActive ? "aktif" : "pasif") *@
+            @{string durum="";}
+            @if (ViewBag.IsActive)
+            {
+                durum="aktif";
+            } else
+            {
+                durum="pasif";
+            }
+            @durum
+        </span>
+        durumdadır.
+
+    </p>
+</div>
