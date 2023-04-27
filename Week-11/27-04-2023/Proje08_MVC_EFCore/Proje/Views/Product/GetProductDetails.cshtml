@@ -1,0 +1,35 @@
+﻿@model Product
+<h1 class="display-6" style="text-align: center; font-weight: 400">Product Details</h1>
+<hr />
+
+<div class="card mb-3 bg-light" style="">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="https://images.unsplash.com/10/wii.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="img-fluid rounded-start" style="border-radius: 10px!important ; padding: 5px; height:100%; width: 100%" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body" style="text-align: center; padding:8px!important">
+                <h5 class="card-title bg-success text-white p-1" style="border-radius: 5px; text-align:center">@Model.Name</h5>
+                
+                <h6 class="card-text">@Model.Category.Name</h6>
+                
+                <p class="card-text">@Model.Description</p>
+                <hr />
+                <div>
+                    <span class="text-danger fw-bold">Oluşturan: </span>
+                    <span>@Model.CreatedByName</span>
+                </div>
+                
+                <div>
+                    <span class="text-danger fw-bold">Fiyat: </span>
+                    <span>@Model.Price</span>
+                </div>
+                <hr />
+                <p class="card-text"><small class="text-body-secondary">Stokta 5 adet var.</small></p>
+                <div style="max-width: 100%">
+                    <div class="btn btn-success" style="width: 100%">Sepete Ekle</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

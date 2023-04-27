@@ -1,0 +1,36 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Ürünler";
+    List<Product> products = Model;
+}
+<h1 style="text-align: center" class="display-6">Ürünler</h1>
+@Model.Count @*Buradaki büyük harflı Model Products'ı temsil ediyor. İstersek yukarıda oluşturduğumuz değişkenle de products olarak da yazabiliriz.*@
+<div class="row g-3">
+    @foreach (var p in products)
+    {
+        <div class="col-6">
+            <div class="card bg-light" style="">
+                <div class="card-body">
+                    <h5 class="card-title bg-success p-2 rounded-3 text-white">@p.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">@p.Category.Name</h6>
+                    <p class="card-text">@p.Description</p>
+                    @*<div>
+                        <span class="text-danger fw-bold">Oluşturan: </span>
+                        <span>@p.CreatedByName</span>
+                    </div>
+
+                    <div>
+                        <span class="text-danger fw-bold">Fiyat: </span>
+                        <span>@p.Price</span>
+                    </div>*@
+                    <div class="d-grid mt-3">
+                    <a 
+                        asp-area="" asp-controller="Product" asp-action="GetProductDetails" asp-route-id="@p.Id"
+                        class="btn btn-success btn-sm ">Detay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    
+</div>
