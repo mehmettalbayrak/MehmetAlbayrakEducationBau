@@ -1,0 +1,19 @@
+﻿@model List<MiniShopApp.Entity.Concrete.Product>
+@*@model List<MiniShopApp.Entity.Concrete.Category>*@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*@foreach (var category in Model)
+{
+    <div>@category.Name</div>
+}*@
+
+@foreach (var products in Model)
+{
+    <div>
+        <span>@products.Name</span>
+        <span>@products.Price</span>
+    </div>
+}
+
