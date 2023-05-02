@@ -1,0 +1,29 @@
+﻿@model ProductsCategoriesViewModel
+<div class="row">
+    <div class="col-md-2">
+        @foreach (var c in Model.Categories)
+        {
+            <a href="#" class="list-group-item list-group-item-action">@c.Name</a>
+        }
+
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            @foreach (var p in Model.Products)
+            {
+                <div class="col-md-4">
+                <div class="card p-3">
+                        <img src="https://picsum.photos/200/300?grayscale" class="card-img-top m-auto" alt="..." style="width: 200px; border-radius: 10px!important;">
+                    <div class="card-body">
+                        <h5 class="card-title">@p.Name</h5>
+                        <p class="card-text">@p.Properties</p>
+                        <p class="card-text">@p.Price</p>
+                        <a href="#" class="btn btn-primary">İncele</a>
+                    </div>
+                </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
