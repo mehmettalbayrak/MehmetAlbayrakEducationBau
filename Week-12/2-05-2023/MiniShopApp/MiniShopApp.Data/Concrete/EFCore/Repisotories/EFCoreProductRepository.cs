@@ -17,7 +17,7 @@ namespace MiniShopApp.Data.Concrete.EFCore.Repisotories
         {
             var result = await _context
                 .Products
-                .Where(p => p.IsActive && !p.IsDeleted && !p.IsHome)
+                .Where(p => p.IsActive && !p.IsDeleted && p.IsHome)
                 .ToListAsync();
             return result;
         }
