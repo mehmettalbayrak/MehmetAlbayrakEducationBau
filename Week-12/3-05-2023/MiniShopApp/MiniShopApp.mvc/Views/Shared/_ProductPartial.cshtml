@@ -1,0 +1,17 @@
+@model MiniShopApp.Entity.Concrete.Product
+@{
+    var p = Model;
+}
+<div class="card">
+    <img src="~/images/products/@p.ImageUrl" class="card-img-top mt-2 m-auto product-img" alt="..."
+        style="border-radius: 10px!important;">
+    <div class="card-body">
+        <h5 class="card-title fs-6" style="text-align: center;">@p.Name</h5>
+        <p class="card-text fs-6" style="text-align: center;">@p.Price</p>
+        <div
+            style="display: flex; align-items: center; flex-direction: row; margin: 0; justify-content: space-between;">
+            <a href="#" class="btn btn-primary" style="">İncele</a>
+            <a href="#" class="btn btn-success" style="">Sepete Ekle</a>
+        </div>
+    </div>
+</div>
