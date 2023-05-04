@@ -1,0 +1,27 @@
+@model MiniShopApp.Entity.Concrete.Product
+
+<div class="card mb-3" style="max-width: 1000px; display: flex!important;">
+    <div class="row g-0">
+        <div class="col-md-2 p-3 ps-4">
+            <img src="~/images/products/@Model.ImageUrl" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-3">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text">@Model.Properties</p>
+                <p>@($"{Model.Price:C0}")</p>
+                <p class="card-text"><small class="text-body-secondary">@Model.ModifiedDate.ToShortDateString() tarihinde güncellendi.</small></p>
+            </div>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="p-4 ">
+                <button class="btn btn-danger mb-2">Favorilere Ekle</button>
+                <button class="btn btn-success">Sepetee Ekle</button>
+            </div>
+        </div>
+    </div>
+<div class="card">
+    <div class="col-md-2"></div>
+    <h1>Teknik Özellikler</h1>
+</div>
+</div>
