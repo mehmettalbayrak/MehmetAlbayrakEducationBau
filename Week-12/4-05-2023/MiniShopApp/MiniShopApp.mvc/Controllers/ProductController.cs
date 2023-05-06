@@ -39,7 +39,7 @@ namespace MiniShopApp.mvc.Controllers
                 ImageUrl = product.ImageUrl,
                 CategoryList = product.ProductCategories.Select(pc => pc.Category).ToList()
             };
-            return View(viewModel);
+            return View(product);
         }
     }
 }
