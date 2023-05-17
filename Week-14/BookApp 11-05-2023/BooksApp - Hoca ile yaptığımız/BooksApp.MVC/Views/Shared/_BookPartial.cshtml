@@ -1,0 +1,19 @@
+﻿@model BooksApp.Entity.Concrete.Book
+
+<div class="card">
+    <a href="#">
+        <img src="/images/books/@Model.ImageUrl" class="card-img-top" />
+    </a>
+  
+    <div class="card-body">
+        <h4 class="card-title">@Model.Name</h4>
+        <h6 class="card-text">@Model.Author.FirstName @Model.Author.LastName</h6>
+        <h6 class="card-text">@Model.Publisher.Name</h6>
+        <strong>@($"{Model.Price:C0}")</strong>
+        
+        <div class="text-center d-grid gap-2 mt-2">
+            <a href="#" class="btn btn-info btn-sm" style="color: white !important;">İncele</a>
+            <a href="#" class="btn btn-success btn-sm">Sepete Ekle</a>
+        </div>
+    </div>
+</div>

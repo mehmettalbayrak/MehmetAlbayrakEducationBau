@@ -1,0 +1,37 @@
+Migrations komutlarını verebilmek için design paketlerini yükledik.
+
+Paketlerden sonra entityleri oluşturduk. OOP imkanından dolayı soyutlayarak devam ediyoruz. Soyutlamanın fayadalarından yararlanmak için soyutları Abstract somutları Concrete'de oluşturuyoruz. 
+
+Soyut yapı: Interfaceler ve abstractlar.
+Somutlar: Classlar.
+
+Concrete'de hangi veri tabanı bağlantı tipini kullanıyorsak onları oluşturuyoruz. Veri tabanı işleri için EFWork kullanacağımız için EFCore klasörü oluşturduk.
+EFCore klasöründe; yaklaşım katagorilendirmeye çalışmak. Karmaşadan uzaklaştırıp projenin çözümlenmesini ve geliştirmesini kolaylaştırmak. 
+
+TEntity bir generic yapı. Yani generic yapıda yazdığımız metotları miras alan classımızda entitysini belirleyerek(Author gibi) generic yapıda kurduğumuz metotları kullanabiliriz. (EFCore katmanı için.)
+
+
+
+Context yapısı: Entitylerimde hangi tabloların hangi veri tabanlarıyla çalışması gerektiğini burada belirtiyoruz.
+Repo: Metotlarımızın nasıl çalışması gerektiğini burada tutuyoruz. (Şu bilgileri çek bu bilgileri gönder.)
+
+Config: Zorunlu değil ama kodlarımızın esnek olması için yaptığımız katman. ModelBuilder üzerinden örnek olarak; kategorilerin ID'si PK olsun şu FK olsun bu kadar ürün olsun gibi olayları ayrı entitylerimizi oluşturarak düzenlemek.
+
+Context yapımızı oluşturmak için classlarımızı oluşturmamız lazım. (Book, Author, Category, Publisher vb.) Burada oluşturulan classlar için veri tabanımızda tabloların oluşmasını sağlıyoruz. Ve bu tablolar oluşurken o tabloların içinde ne olduğunu belirtmemiz için classları öncesinde oluşturmamız ve içindeki propertyleri hazırlamamız gerekmekte. (Tabloyu oluşturan migrations)
+
+Override: Eğer bir sınıfın içerisinde bir metotu bir propertyi virtual olarak yaptıysak bu classdan türeyen şey override edilebilir. Override ederek sqlite database ini kullanabilir duruma geldik.
+
+onmodelcreating de şu classdaki bu property PK olabilsin yapabilmek için bunu yazıyoruz. (config yapısında yaptıklarımız.)
+
+BookCategoryConfig'le haskey new diyerek hem book hem de category nin IDlerini PK olarak tanımladık ve tekrar edilmesini önledik.
+
+Config ve context yapılarımız da hazırsa artık Migrations işlemlerini yapıp daha sonra update komutunu vermemiz gerekmektedir. 
+
+-------------------------------------------------------------
+
+Business katmanı:
+
+BooksApp'den örnek verelim: AuthorManager: Gerçekte MVC katmanından bütün Authorları çekmek için kullanılacak olan getallasync metodu burada bulunmakta. Yani oluşacak aksiyonlar burada gerçekleşecek. Buradaki metod veritabanındaki verileri döndüren metodu çağıran metod. Yani katman. 
+
+
+

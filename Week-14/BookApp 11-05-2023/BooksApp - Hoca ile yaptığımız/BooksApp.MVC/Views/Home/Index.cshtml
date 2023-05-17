@@ -1,0 +1,21 @@
+﻿@model List<BooksApp.Entity.Concrete.Book>
+@{
+    ViewData["Title"] = "BooksApp Ana Sayfa";
+}
+
+<div class="row">
+    <div class="col-2">
+        Kategoriler
+    </div>
+    <div class="col-10">
+        <div class="row g-4">
+            @foreach (var book in Model)
+            {
+                <div class="col-3">
+                    @await Html.PartialAsync("_BookPartial", book)
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
