@@ -1,0 +1,19 @@
+﻿@model List<AuthorViewModel>
+<div class="list-group mt-4">
+    <a class="list-group-item list-group-item-action"
+       asp-area=""
+       asp-controller="BooksShop"
+       asp-action="BookList"
+       asp-route-authorurl=""
+       asp-route-categoryurl=""
+       asp-route-publisherurl=""
+    >Tüm Yazarlar</a>
+    @foreach (var authorViewModel in Model)
+    {
+        <a class="list-group-item list-group-item-action"
+       asp-area=""
+       asp-controller="BooksShop"
+       asp-action="BookList"
+       asp-route-authorurl="@authorViewModel.Url">@authorViewModel.Name</a>
+    }
+</div>
