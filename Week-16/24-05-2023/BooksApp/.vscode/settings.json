@@ -1,0 +1,32 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "[!B]*/**": true,
+        "B[!o]*/**": true,
+        "Bo[!o]*/**": true,
+        "Boo[!k]*/**": true,
+        "Book[!s]*/**": true,
+        "Books[!A]*/**": true,
+        "BooksA[!p]*/**": true,
+        "BooksAp[!p]*/**": true,
+        "BooksApp[!.]*/**": true,
+        "BooksApp.[!M]*/**": true,
+        "BooksApp.M[!V]*/**": true,
+        "BooksApp.MV[!C]*/**": true,
+        "BooksApp.MVC/[!A]*/**": true,
+        "BooksApp.MVC/A[!r]*/**": true,
+        "BooksApp.MVC/Ar[!e]*/**": true,
+        "BooksApp.MVC/Are[!a]*/**": true,
+        "BooksApp.MVC/Area[!s]*/**": true,
+        "BooksApp.MVC/Areas/[!A]*/**": true,
+        "BooksApp.MVC/Areas/A[!d]*/**": true,
+        "BooksApp.MVC/Areas/Ad[!m]*/**": true,
+        "BooksApp.MVC/Areas/Adm[!i]*/**": true,
+        "BooksApp.MVC/Areas/Admi[!n]*/**": true
+    }
+}
