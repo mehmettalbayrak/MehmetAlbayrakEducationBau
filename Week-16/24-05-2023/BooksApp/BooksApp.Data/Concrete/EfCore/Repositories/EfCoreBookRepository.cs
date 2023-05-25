@@ -45,6 +45,17 @@ namespace BooksApp.Data.Concrete.EfCore.Repositories
             return await result.ToListAsync();
         }
 
+        public async Task<List<Book>> GetAllBooksWithAuthorAndPublisher(bool isDeleted)
+        {
+            var result = await _context
+                .Books
+                .Where(b => b.IsDeleted == isDeleted)
+                .Include(b => b.Author)
+                .Include(b => b.Publisher)
+                .ToListAsync();
+            return result;
+        }
+
         public async Task<Book> GetBoookByUrlAsync(string bookUrl)
         {
             var result = await _context

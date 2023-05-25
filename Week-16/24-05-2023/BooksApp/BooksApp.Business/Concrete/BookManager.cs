@@ -63,5 +63,10 @@ namespace BooksApp.Business.Concrete
             return result;
         }
 
+        public Task<List<Book>> GetAllBooksAuthorAndPublisher(bool isDeleted)
+        {
+            var result = _bookRepository.GetAllBooksWithAuthorAndPublisher(isDeleted);
+            return result;
+        }
     }
 }

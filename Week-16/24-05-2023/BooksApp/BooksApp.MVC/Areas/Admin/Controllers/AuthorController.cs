@@ -127,8 +127,18 @@ namespace BooksApp.MVC.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 Author author = await _authorManager.GetByIdAsync(authorEditViewModel.Id);
                 if (author == null) { return NotFound(); }
+                string photoUrl = "";
+                string url = Jobs.GetUrl(authorEditViewModel.FirstName + "-" + authorEditViewModel.LastName);
+                if (authorEditViewModel.PhotoFile == null) 
+                {
+                    photoUrl = author.PhotoUrl;
+                } else
+                {
+                    photoUrl = Jobs.UploadImage(authorEditViewModel.PhotoFile, url, "authors");
+                }
                 author.FirstName = authorEditViewModel.FirstName;
                 author.LastName = authorEditViewModel.LastName;
                 author.About = authorEditViewModel.About;
@@ -136,8 +146,9 @@ namespace BooksApp.MVC.Areas.Admin.Controllers
                 author.IsActive = authorEditViewModel.IsActive;
                 author.IsDeleted = authorEditViewModel.IsDeleted;
                 author.IsAlive = authorEditViewModel.IsAlive;
-                authorEditViewModel.Url = Jobs.GetUrl(authorEditViewModel.FirstName + "-" + authorEditViewModel.LastName);
+                authorEditViewModel.Url = url;
                 author.Url = authorEditViewModel.Url;
+                author.PhotoUrl= photoUrl;
                 author.ModifiedDate = DateTime.Now;
                 _authorManager.Update(author);
                 _notyf.Success("Yazar bilgisi başarıyla güncellenmiştir.", 2);

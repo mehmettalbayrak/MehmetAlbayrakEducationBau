@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using BooksApp.Core.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace BooksApp.Core
 {
@@ -98,5 +99,34 @@ namespace BooksApp.Core
                 return cities;
             }
         }
+        public static string UploadImage(IFormFile imageFile, string url, string dir)
+        {
+            //resim dosyası(imageFile)
+            //url, klasrör(dir)
+            //ilk işimiz gelen IFormFile içinden uzantıyı alıyoruz.
+            var extension = Path.GetExtension(imageFile.FileName);
+
+            //ikinci olarak rastgele bir dosya adı üretiyoruz.
+            //kemal-tahir-54353-hgfdhs-4re245.jpg gibi.
+            //url=safa-kunduraci
+            //guid=4325-54523452-543254
+            //extension=.jpg
+            //safa-kunduraci-4325-54523452-543254.jpg oluşacak
+            var randomName = $"{url}-{Guid.NewGuid()}.{extension}";
+
+            //şimdi ise resmi kaydedeceğimiz yolu belirliyoruz yani path.
+            var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "images", dir, randomName);
+
+            //resmi bir stram(akış) nesnesinin içine koymamız gerekiyor. Ve sonra bu nesne üzerinden resmi sunucuya kopyalayacağız.
+
+            using (FileStream stream = new FileStream(path, FileMode.Create))
+            {
+                imageFile.CopyTo(stream);
+            }
+
+            return randomName;
+        }
+
+
     }
 }

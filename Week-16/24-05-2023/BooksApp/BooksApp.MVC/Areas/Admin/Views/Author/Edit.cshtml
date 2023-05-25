@@ -98,15 +98,20 @@
     @await Html.PartialAsync("_ValidationScriptsPartial");
     @await Html.PartialAsync("_CkEditorPartialJs")
     <script>
-        const photoFile = document.getElementById("photo-file");
-        const photoViewer = document.getElementById("photo-viewer");
-        const photoUrl = document.getElementById("photo-url");
+        //const photoFile = document.getElementById("photo-file");
+        //const photoViewer = document.getElementById("photo-viewer");
+        //const photoUrl = document.getElementById("photo-url");
 
 
-        photoFile.addEventListener("change", function(event){
+        //photoFile.addEventListener("change", function(event){
+        //    let selectedFiles = event.target.files;
+        //    photoViewer.setAttribute("src", window.URL.createObjectURL(selectedFiles[0]))
+        //    photoUrl.innerText = photoViewer.getAttribute("src")
+        //});
+        $("#photo-file").on("change", function(event){
             let selectedFiles = event.target.files;
-            photoViewer.setAttribute("src", window.URL.createObjectURL(selectedFiles[0]))
-            photoUrl.innerText = photoViewer.getAttribute("src")
+            $("#photo-viewer").attr("src",window.URL.createObjectURL(selectedFiles[0]));
+            $("#photo-url").text($("#photo-viewer").attr("src"))
         });
     </script>
 }
