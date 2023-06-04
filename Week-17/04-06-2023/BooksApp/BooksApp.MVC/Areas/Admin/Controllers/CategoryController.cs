@@ -12,11 +12,13 @@ namespace BooksApp.MVC.Areas.Admin.Controllers
     {
         private readonly ICategoryService _categoryManager;
         private readonly INotyfService _notyf;
+        private readonly IBookService _bookManager;
 
-        public CategoryController(ICategoryService categoryManager, INotyfService notyf)
+        public CategoryController(ICategoryService categoryManager, INotyfService notyf, IBookService bookManager)
         {
             _categoryManager = categoryManager;
             _notyf = notyf;
+            _bookManager = bookManager;
         }
 
         #region Listeleme
@@ -148,6 +150,7 @@ namespace BooksApp.MVC.Areas.Admin.Controllers
             Category category = await _categoryManager.GetByIdAsync(id);
             if (category == null) return NotFound();
             _categoryManager.Delete(category);
+            await _bookManager.UpdateCategoryOfBooks();
             _notyf.Success("Kayıt veri tabanından kalıcı olarak silinmiştir.");
             return RedirectToAction("Index");
         }

@@ -17,5 +17,6 @@ namespace BooksApp.Data.Abstract
         Task CreateBookAsync(Book book, List<int> SelectedCategoryIds);
         Task UpdateAuthorOfBooks();
         Task UpdatePublisherOfBooks();
+        Task UpdateCategoryOfBooks();
     }
 }

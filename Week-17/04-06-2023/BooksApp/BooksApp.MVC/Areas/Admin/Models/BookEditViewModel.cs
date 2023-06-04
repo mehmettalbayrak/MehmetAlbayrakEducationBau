@@ -9,7 +9,7 @@ namespace BooksApp.MVC.Areas.Admin.Models
     {
         public BookEditViewModel()
         {
-            SelectedCategoryIds = new List<int>();
+            SelectedCategoryIds = new List<int?>();
         }
         public int Id { get; set; }
 
@@ -70,6 +70,6 @@ namespace BooksApp.MVC.Areas.Admin.Models
         [DisplayName("Kategoriler")]
         public List<CategoryViewModel> CategoryList { get; set; }
 
-        public List<int> SelectedCategoryIds { get; set; } 
+        public List<int?> SelectedCategoryIds { get; set; } 
     }
 }

@@ -88,5 +88,10 @@ namespace BooksApp.Business.Concrete
         {
             await _bookRepository.UpdatePublisherOfBooks();
         }
+
+        public async Task UpdateCategoryOfBooks()
+        {
+            await _bookRepository.UpdateCategoryOfBooks();
+        }
     }
 }

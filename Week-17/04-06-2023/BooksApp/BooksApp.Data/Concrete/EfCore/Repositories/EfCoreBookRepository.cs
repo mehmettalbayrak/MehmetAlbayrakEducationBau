@@ -2,6 +2,7 @@
 using BooksApp.Data.Concrete.EfCore.Contexts;
 using BooksApp.Entity.Concrete;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,14 +44,14 @@ namespace BooksApp.Data.Concrete.EfCore.Repositories
 
         public async Task<List<Book>> GetAllActiveBooksAsync(string categoryUrl = null, string authorUrl = null, string publisherUrl = null)
         {
-            
+
             var result = _context
                 .Books
                 .Where(b => b.IsActive && !b.IsDeleted)
                 .Include(b => b.Author)
                 .Include(b => b.Publisher)
                 .AsQueryable();
-            if (categoryUrl!=null)
+            if (categoryUrl != null)
             {
                 result = result
                     .Include(b => b.BookCategories)
@@ -88,7 +89,7 @@ namespace BooksApp.Data.Concrete.EfCore.Repositories
         {
             var result = await _context
                 .Books
-                .Where(b => b.IsActive && !b.IsDeleted && b.Id==id)
+                .Where(b => b.IsActive && !b.IsDeleted && b.Id == id)
                 .Include(b => b.BookCategories)
                 .ThenInclude(bc => bc.Category)
                 .Include(b => b.Author)
@@ -110,21 +111,21 @@ namespace BooksApp.Data.Concrete.EfCore.Repositories
             return result;
         }
 
-        public async Task<List<Book>> GetBooksWithFullDataAsync(bool? isHome=null, bool? isActive = null)
+        public async Task<List<Book>> GetBooksWithFullDataAsync(bool? isHome = null, bool? isActive = null)
         {
             var result = _context
                 .Books
                 .Where(b => !b.IsDeleted)
                 .AsQueryable();
 
-            if (isHome!=null)
+            if (isHome != null)
             {
                 result = result
                     .Where(b => b.IsHome == isHome)
                     .AsQueryable();
             }
 
-            if (isActive!=null)
+            if (isActive != null)
             {
                 result = result
                     .Where(b => b.IsActive == isActive)
@@ -166,6 +167,26 @@ namespace BooksApp.Data.Concrete.EfCore.Repositories
             }
             _context.Books.UpdateRange(books);
             await _context.SaveChangesAsync();
+        }
+        public async Task UpdateCategoryOfBooks()
+        {
+            var books = await _context
+            .BookCategories
+            .Where(b => b.CategoryId == null)
+            .ToListAsync();
+            //.Books
+            //.Include(b => b.BookCategories)
+            //.ThenInclude(bc => bc.CategoryId)
+            //.ToListAsync();
+            foreach (var book in books)
+            {
+                if (book == null)
+                {
+                    book.Category.Id = 1;
+                }
+                _context.BookCategories.UpdateRange(books);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

@@ -18,14 +18,15 @@ namespace BooksApp.Business.Abstract
         #endregion
 
         #region Book
-        Task<List<Book>> GetBooksWithFullDataAsync(bool? isHome = null, bool? isActive=null);
-        Task<List<Book>> GetAllActiveBooksAsync(string categoryUrl=null, string authorUrl=null, string publisherUrl=null);
+        Task<List<Book>> GetBooksWithFullDataAsync(bool? isHome = null, bool? isActive = null);
+        Task<List<Book>> GetAllActiveBooksAsync(string categoryUrl = null, string authorUrl = null, string publisherUrl = null);
         Task<Book> GetBookByUrlAsync(string bookUrl);
         Task<Book> GetBookByIdAsync(int id);
         Task<List<Book>> GetAllBooksWithAuthorAndPublisher(bool isDeleted);
         Task CreateBookAsync(Book book, List<int> SelectedCategoryIds);
         Task UpdateAuthorOfBooks();
         Task UpdatePublisherOfBooks();
+        Task UpdateCategoryOfBooks();
         #endregion
     }
 }
