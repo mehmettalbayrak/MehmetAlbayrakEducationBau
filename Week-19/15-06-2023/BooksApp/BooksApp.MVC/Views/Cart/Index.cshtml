@@ -1,0 +1,61 @@
+﻿@model CartViewModel
+
+<h1 class="display-6">Alışveriş Sepeti</h1>
+<hr />
+@if (Model.CartItems.Count == 0)
+{
+    <div class="alert alert-warning">
+        Sepetinizde ürün bulunmamaktadır.
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-8">
+            <h6 class="text-success dipslay-6 fw-normal">Sepetteki Kitaplar</h6>
+            <hr />
+            <table class="table table-sm">
+                <thead>
+                    <tr class="text-danger">
+                        <th>Resim</th>
+                        <th>Kitap</th>
+                        <th>Fiyat</th>
+                        <th>Adet</th>
+                        <th>Toplam</th>
+                        <th>KDV</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.CartItems)
+                    {
+                        <tr>
+                            <td>
+                                <img src="~/images/books/@item.BookImageUrl" width="50" />
+                            </td>
+                            <td>@item.BookName</td>
+                            <td>@($"{item.Price:C2}")</td>
+                            <td>@item.Quantity</td>
+                            @{
+                                decimal? total = item.Price * item.Quantity;
+                                decimal? kdv = total - (total / 1.08m);
+                            }
+                            <td>
+                                @($"{total:C2}")
+                            </td>
+                            <td>@($"{kdv:C2}")</td>
+                            <td>
+                                <a asp-area=""
+                           asp-controller="Cart"
+                           asp-action="DeleteItemFromCart" class="btn btn-sm btn-close bg-danger d-flex text">
+
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+}
