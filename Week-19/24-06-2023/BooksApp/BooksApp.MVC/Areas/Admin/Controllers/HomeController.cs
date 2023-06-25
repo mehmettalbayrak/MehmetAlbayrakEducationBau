@@ -181,15 +181,32 @@ namespace BooksApp.MVC.Areas.Admin.Controllers
         public async Task<IActionResult> RoleEdit(RoleUpdateViewModel model)
         {
             var role = await _roleManager.FindByIdAsync(model.Role.Id);
-            foreach (var userId in model.IdsToAdd)
+            foreach (var userId in model.IdsToAdd ?? new string[] { })
             {
-
+                User user = await _userManager.FindByIdAsync(userId);
+                var result = await _userManager.AddToRoleAsync(user, role.Name);
+                if (!result.Succeeded)
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("", "Bir hata oluştu.");
+                    }
+                }
             }
 
-            foreach (var userId in model.IdsFromRemove)
+            foreach (var userId in model.IdsFromRemove ?? new string[] { })
             {
-
+                User user = await _userManager.FindByIdAsync(userId);
+                var result = await _userManager.RemoveFromRoleAsync(user, role.Name);
+                if (!result.Succeeded)
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                }
             }
+            return Redirect($"/Admin/Home/RoleEdit/{role.Id}");
         }
         #endregion
     }
