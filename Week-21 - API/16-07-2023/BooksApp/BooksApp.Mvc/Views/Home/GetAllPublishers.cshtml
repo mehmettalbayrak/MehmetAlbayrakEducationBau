@@ -1,0 +1,18 @@
+﻿@model List<PublisherViewModel>
+<h1 class="display-6">Yayınevleri</h1>
+<hr />
+
+<div>
+    @foreach (var publishers in Model)
+    {
+        <div>
+            <a asp-area=""
+           asp-controller="Home"
+           asp-action="GetPublisherById"
+           asp-route-id="@publishers.Id">
+                @publishers.Name
+            </a>
+        </div>
+
+    }
+</div>
