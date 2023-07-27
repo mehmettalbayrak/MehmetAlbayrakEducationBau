@@ -1,0 +1,6 @@
+Dosya terminalinde "npm install nodemon --save-dev" yazıp paketi yüklüyoruz.
+
+"npm install -g nodemon --save-dev" bilgisayara tamamen yükleyip, yeni proje oluştursak bile dotnet watch run gibi çalıştırabiliriz.
+
+bir şeyi çalıştırmak için "npx" terimini kullanıyoruz.
+komutun tam hali de; "npx nodemon app.js"

@@ -1,0 +1,12 @@
+{
+  "name": "njs01_basics",
+  "version": "1.0.0",
+  "description": "Bu bizim ilk package.json dosyamız.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mehmet Albayrak",
+  "license": "ISC",
+  "keywords": []
+}

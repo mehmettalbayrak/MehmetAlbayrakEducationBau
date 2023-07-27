@@ -1,0 +1,15 @@
+{
+  "name": "njs01_basics",
+  "version": "1.0.0",
+  "description": "Bu bizim ilk package.json dosyamız.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon app.js"
+  },
+  "author": "Mehmet Albayrak",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

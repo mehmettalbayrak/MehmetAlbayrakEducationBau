@@ -1,0 +1,22 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "[!n]*/**": true,
+    "n[!j]*/**": true,
+    "nj[!s]*/**": true,
+    "njs[!0]*/**": true,
+    "njs0[!3]*/**": true,
+    "njs03[!_]*/**": true,
+    "njs03_[!b]*/**": true,
+    "njs03_b[!a]*/**": true,
+    "njs03_ba[!s]*/**": true,
+    "njs03_bas[!i]*/**": true,
+    "njs03_basi[!c]*/**": true,
+    "njs03_basic[!s]*/**": true
+  }
+}
