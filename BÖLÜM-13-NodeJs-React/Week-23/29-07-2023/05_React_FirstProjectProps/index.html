@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Reacte yapacağomız her şey buraya yerleşecek. -->
+    </div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      function HomePage() {
+        return (
+          <>
+            <div>
+              <Header title="Hello" name="" />
+              <Header title="Hi" name="Ali" />
+              <Header title="Valar Morghulis" name="Mehmet" />
+            </div>
+          </>
+          // iki div elementini aynı anda çalıştırmıyor. Hepsini kapsayacak tek bir element istiyor. Bu yüzden boş bir etiket açtık. Hepsini kapsaması için.
+        );
+      }
+      function Header({ title, name }) {
+        return <h1>{title + " " + name ? name : "Simiramis"}</h1>;
+      }
+      ReactDOM.render(<HomePage />, root);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+npm init -y ---> package.json dosyasını oluşturuyor.
+npm i react react-dom next ---> 3 paket yükler; React, React DOM ve Next
