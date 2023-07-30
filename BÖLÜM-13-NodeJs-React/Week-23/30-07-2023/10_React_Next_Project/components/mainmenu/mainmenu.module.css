@@ -1,0 +1,9 @@
+.MainMenu {
+  list-style: none;
+  background-color: bisque;
+  display: flex;
+  max-height: 25%;
+  max-width: 25%;
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
