@@ -1,0 +1,27 @@
+.avatar {
+  width: 100%;
+}
+
+#gif {
+  height: 220px;
+  width: 220px;
+  /* margin-top: 140px; */
+}
+
+#github {
+  margin: 0;
+}
+
+/* form {
+  width: 40%;
+}
+
+.clearBtn {
+  width: 40%;
+  align-items: center;
+}
+
+.w-100 {
+  align-items: center;
+  text-align: center;
+} */
