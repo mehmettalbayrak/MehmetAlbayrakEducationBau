@@ -1,0 +1,11 @@
+﻿.headerContainer {
+    color: yellow;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    background-color: black;
+    padding: 15px;
+    border-radius: 5px;
+}

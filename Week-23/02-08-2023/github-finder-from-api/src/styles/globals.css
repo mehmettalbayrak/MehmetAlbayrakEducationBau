@@ -1,0 +1,13 @@
+.avatar {
+  width: 100%;
+}
+
+#gif {
+  height: 220px;
+  width: 220px;
+  /* margin-top: 140px; */
+}
+
+#github {
+  margin: 0;
+}
