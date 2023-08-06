@@ -1,0 +1,8 @@
+rfc --> component iskeleti oluşturma.
+useStateSnippet --> state oluşturmanın snippetı.
+
+
+npx create-next-app --> next app'i create etme.
+
+npm run dev --> geliştiri olarak uygulamayı çalıştırma.
+
